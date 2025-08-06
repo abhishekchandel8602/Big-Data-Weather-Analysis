@@ -3,7 +3,7 @@ name: Upload Files to S3 on Push
 on:
   push:
     branches:
-      - main # or 'master' if your default branch is that
+      - main
 
 jobs:
   upload-to-s3:
@@ -18,7 +18,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1 # 🔁 Change if your bucket is in a different region
+          aws-region: us-east-1
 
       - name: Upload Files to S3
         run: |
