@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main # branch name
-
+      
 env:
   AWS_REGION: ${{ secrets.REGION }}
   SCRIPT_PATH: my-etl-pipline/glue-script/weather-etl.py
